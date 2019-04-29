@@ -1,0 +1,15 @@
+\newlength\drop
+\makeatletter
+\newcommand*\titleM{\begingroup% Misericords, T&H p 153
+	\setlength\drop{0.08\textheight}
+	\centering
+	\vspace*{\drop}
+	{\Huge\bfseries The Title}\\[\baselineskip]
+	{\scshape the subtitle}\\[\baselineskip]
+	\vfill
+	{\large\scshape the author}\par
+	\vfill
+	{\scshape \@date}\par
+	\vspace*{2\drop}
+	\endgroup}
+\makeatother

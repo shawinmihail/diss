@@ -1,0 +1,27 @@
+
+\RequirePackage[l2tabu,orthodox]{nag}
+\documentclass[a4paper,14pt,oneside,openany]{memoir}
+\usepackage[left=2.5cm, right=1cm, top=2cm, bottom=2cm]{geometry}
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\usepackage{bm}
+\usepackage{amsmath}
+\usepackage[russian]{babel}
+\renewcommand{\baselinestretch}{1.5}
+\setlength{\parindent}{1.25cm}
+\usepackage{indentfirst}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+
+\addbibresource{bibliography/citations.bib}
+
+
+\include{title}
+\begin{document}
+	\begin{titlingpage}
+		\titleM
+	\end{titlingpage}
+	\include{intro}
+	\include{review}	
+	\printbibliography
+\end{document}
+

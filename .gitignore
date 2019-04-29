@@ -7,3 +7,5 @@
 *.zip
 *.pdf
 refs
+*.bcf
+*.xml
