@@ -1,8 +1,9 @@
-
-\RequirePackage[l2tabu,orthodox]{nag}
 \documentclass[a4paper,14pt,oneside,openany]{memoir}
 \usepackage[left=2.5cm, right=1cm, top=2cm, bottom=2cm]{geometry}
+
 \usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\DeclareFieldFormat{labelnumberwidth}{{#1\adddot}}
+  
 \usepackage{bm}
 \usepackage{amsmath}
 \usepackage[russian]{babel}
@@ -12,14 +13,18 @@
 \usepackage[utf8]{inputenc}
 \usepackage{csquotes}
 
+\pagestyle{myheadings} % нумерация страниц вверху справа
+\aliaspagestyle{chapter}{myheadings} % нумерация страниц вверху справа
+
+\renewcommand{\cftchapterpagefont}{\normalfont}% нежирные номера страниц у глав в оглавлении
+\renewcommand{\cftchapterleader}{\cftdotfill{\cftchapterdotsep}}% нежирные точки до номеров страниц у глав в оглавлении
+\renewcommand{\cftchapterfont}{}% нежирные названия глав в оглавлении
+
 \addbibresource{bibliography/citations.bib}
 
-
-\include{title}
 \begin{document}
-	\begin{titlingpage}
-		\titleM
-	\end{titlingpage}
+	\include{title}
+	\tableofcontents
 	\include{intro}
 	\include{review}	
 	\printbibliography
