@@ -13,6 +13,10 @@
 \usepackage[utf8]{inputenc}
 \usepackage{csquotes}
 
+%% sections style
+\usepackage{titlesec}
+\titleformat*{\section}{\normalfont\bfseries}
+
 \pagestyle{myheadings} % нумерация страниц вверху справа
 \aliaspagestyle{chapter}{myheadings} % нумерация страниц вверху справа
 
@@ -26,7 +30,9 @@
 	\include{title}
 	\tableofcontents
 	\include{intro}
-	\include{review}	
+	\include{review}
+	\include{main}
+	\sloppy
 	\printbibliography
 \end{document}
 
