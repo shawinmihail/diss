@@ -1,15 +1,23 @@
-\documentclass[a4paper,14pt,oneside,openany]{article}
-\usepackage{fancyhdr}
+\documentclass[a4paper,14pt,oneside,openany]{memoir}
+\usepackage[left=2.5cm, right=1cm, top=2cm, bottom=2cm]{geometry}
+
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\DeclareFieldFormat{labelnumberwidth}{{#1\adddot}}
+
+\usepackage{bm}
+\usepackage{amsmath}
+\usepackage[russian]{babel}
+\renewcommand{\baselinestretch}{1.5}
+\setlength{\parindent}{1.25cm}
+\usepackage{indentfirst}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+
+\usepackage{graphicx}
+\usepackage{caption}
+\captionsetup[figure]{name={Рисунок}, labelsep={space}}
+\graphicspath{ {./pics/} }
 
 \begin{document}
-1. Поставить номера страниц вверху, посередине
-
-2.
-
-@BOOK{Leishman01,
-	author = {},
-	title = { https://www.academia.edu/815361/The\_breguet-richet\_quad-roto\r_helicopter\_of\_1907},
-	publisher = {},
-	year = {}
-}
+	\include{main}
 \end{document}

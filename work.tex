@@ -13,13 +13,19 @@
 \usepackage[utf8]{inputenc}
 \usepackage{csquotes}
 
+%% pics
+\usepackage{graphicx}
+\usepackage{caption}
+\captionsetup[figure]{name={Рисунок}}
+\graphicspath{ {./pics/} }
+
 %% sections style
 \usepackage{titlesec}
 \titleformat*{\section}{\normalfont\bfseries}
 
+%% page style
 \pagestyle{myheadings} % нумерация страниц вверху справа
 \aliaspagestyle{chapter}{myheadings} % нумерация страниц вверху справа
-
 \renewcommand{\cftchapterpagefont}{\normalfont}% нежирные номера страниц у глав в оглавлении
 \renewcommand{\cftchapterleader}{\cftdotfill{\cftchapterdotsep}}% нежирные точки до номеров страниц у глав в оглавлении
 \renewcommand{\cftchapterfont}{}% нежирные названия глав в оглавлении
