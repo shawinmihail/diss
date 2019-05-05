@@ -581,11 +581,6 @@ index f0e5bc9..db2e078 100644
 +	year = {}
  }
  
--@BOOK{Huynh01,
--	author = {Huynh M. Q., Zhao W., Xie L},
--	title = {L1 adaptive control for quadcopter: Design and implementation},
--	publisher = {13th International Conference on Control Automation Robotics and Vision (ICARCV). – IEEE – С. 1496-1501},
--	year = {2014}
 +@BOOK{Bai01,
 +	author = {},
 +	title = {},
