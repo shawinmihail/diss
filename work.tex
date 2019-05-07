@@ -12,12 +12,15 @@
 \usepackage{indentfirst}
 \usepackage[utf8]{inputenc}
 \usepackage{csquotes}
+\usepackage{verbatim} % multi comments
 
-%% pics
+%% pics, tables
 \usepackage{graphicx}
 \usepackage{caption}
-\captionsetup[figure]{name={Рисунок}}
-\graphicspath{ {./pics/} }
+\captionsetup[figure]{name={Рисунок}, labelsep={space}}
+\captionsetup[table]{labelsep={space}}
+\graphicspath{ {./pics/lims/} {./pics/mau/}, {./pics/}}
+\usepackage{subfig}
 
 %% sections style
 \usepackage{titlesec}
@@ -38,6 +41,9 @@
 	\include{intro}
 	\include{review}
 	\include{main}
+	\include{dyn}
+	\include{estimation}
+	\include{experiments}
 	\sloppy
 	\printbibliography
 \end{document}
