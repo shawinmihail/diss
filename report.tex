@@ -1,0 +1,52 @@
+\documentclass[a4paper,14pt,oneside,openany]{memoir}
+\usepackage[left=2.5cm, right=1cm, top=2cm, bottom=2cm]{geometry}
+
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\DeclareFieldFormat{labelnumberwidth}{{#1\adddot}}
+
+\usepackage{bm}
+\usepackage{amsmath}
+\usepackage[russian]{babel}
+\renewcommand{\baselinestretch}{1.5}
+\setlength{\parindent}{1.25cm}
+\usepackage{indentfirst}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage{verbatim} % multi comments
+
+%% pics, tables
+\usepackage{graphicx}
+\usepackage{caption}
+\captionsetup[figure]{name={Рисунок}, labelsep={space}}
+\captionsetup[table]{labelsep={space}}
+\graphicspath{ {./pics/lims/} {./pics/mau/}, {./pics/observer/}, {./pics/acsl/}, {./pics/}}
+\usepackage{subfig}
+
+%% sections style
+\usepackage{titlesec}
+\titleformat*{\section}{\normalfont\bfseries}
+
+%% page style
+\pagestyle{myheadings} % нумерация страниц вверху справа
+\aliaspagestyle{chapter}{myheadings} % нумерация страниц вверху справа
+\renewcommand{\cftchapterpagefont}{\normalfont}% нежирные номера страниц у глав в оглавлении
+\renewcommand{\cftchapterleader}{\cftdotfill{\cftchapterdotsep}}% нежирные точки до номеров страниц у глав в оглавлении
+\renewcommand{\cftchapterfont}{}% нежирные названия глав в оглавлении
+
+\addbibresource{bibliography/citations.bib}
+
+\begin{document}
+	\include{title}
+	\tableofcontents
+	\include{report_intro}
+	\include{report_dyn}
+	\include{report_estimation}
+	\include{report_experiments}
+	\include{end}
+	\include{list}
+	\include{app}
+	\sloppy
+	\printbibliography
+\end{document}
+
+
