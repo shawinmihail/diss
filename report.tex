@@ -15,6 +15,7 @@
 \usepackage{verbatim} % multi comments
 
 %% pics, tables
+\usepackage{float}
 \usepackage{graphicx}
 \usepackage{caption}
 \captionsetup[figure]{name={Рисунок}, labelsep={space}}
@@ -35,16 +36,20 @@
 
 \addbibresource{bibliography/citations.bib}
 
+%% remove chapter number
+\titleformat{\chapter}[display]
+{\normalfont\bfseries}{}{0pt}{\Large}
+
 \begin{document}
-	\include{title}
+	\include{report_title}
 	\tableofcontents
 	\include{report_intro}
 	\include{report_dyn}
 	\include{report_estimation}
 	\include{report_experiments}
-	\include{end}
+	\include{report_end}
 	\include{list}
-	\include{app}
+	
 	\sloppy
 	\printbibliography
 \end{document}
