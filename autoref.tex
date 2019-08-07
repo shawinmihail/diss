@@ -1,0 +1,51 @@
+\documentclass[a4paper,14pt,oneside,openany]{memoir}
+\usepackage[left=2.5cm, right=1cm, top=2cm, bottom=2cm]{geometry}
+
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\DeclareFieldFormat{labelnumberwidth}{{#1\adddot}}
+
+\usepackage{bm}
+\usepackage{amsmath}
+\usepackage[russian]{babel}
+\renewcommand{\baselinestretch}{1.5}
+\setlength{\parindent}{1.25cm}
+\usepackage{indentfirst}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage{verbatim} % multi comments
+
+%% pics, tables
+\usepackage{array}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{caption}
+\captionsetup[figure]{name={Рисунок}, labelsep={space}}
+\captionsetup[table]{labelsep={space}}
+\graphicspath{ {./pics/lims/} {./pics/mau/}, {./pics/observer/}, {./pics/acsl/}, {./pics/} {./pics/estcmpr/}}
+\usepackage{subfig}
+
+%% sections style
+\usepackage{titlesec}
+\titleformat*{\section}{\normalfont\bfseries}
+
+%% page style
+\pagestyle{myheadings} % нумерация страниц вверху справа
+\aliaspagestyle{chapter}{myheadings} % нумерация страниц вверху справа
+\renewcommand{\cftchapterpagefont}{\normalfont}% нежирные номера страниц у глав в оглавлении
+\renewcommand{\cftchapterleader}{\cftdotfill{\cftchapterdotsep}}% нежирные точки до номеров страниц у глав в оглавлении
+\renewcommand{\cftchapterfont}{}% нежирные названия глав в оглавлении
+
+\addbibresource{bibliography/citations.bib}
+
+%% remove chapter number
+\titleformat{\chapter}[display]
+{\normalfont\bfseries}{}{0pt}{\Large}
+
+\begin{document}
+	\include{autoref/title}
+	\include{autoref/intro}
+	\include{autoref/main}
+	\include{autoref/list}
+\end{document}
+
+

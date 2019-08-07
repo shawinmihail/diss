@@ -6,6 +6,7 @@
   
 \usepackage{bm}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage[russian]{babel}
 \renewcommand{\baselinestretch}{1.5}
 \setlength{\parindent}{1.25cm}
@@ -17,10 +18,11 @@
 %% pics, tables
 \usepackage{graphicx}
 \usepackage{caption}
-\captionsetup[figure]{name={Рисунок}, labelsep={space}}
+\captionsetup[figure]{name={Рисунок}, labelsep={space}, justification=centering}
 \captionsetup[table]{labelsep={space}}
-\graphicspath{ {./pics/lims/} {./pics/mau/}, {./pics/observer/}, {./pics/acsl/}, {./pics/}}
+\graphicspath{ {./pics/estcmpr/} {./pics/lims/} {./pics/mau/}, {./pics/observer/}, {./pics/acsl/}, {./pics/}}
 \usepackage{subfig}
+\usepackage{float}
 
 %% sections style
 \usepackage{titlesec}
@@ -36,16 +38,17 @@
 \addbibresource{bibliography/citations.bib}
 
 \begin{document}
-	\include{title}
+	\include{full/title}
 	\tableofcontents
-	\include{intro}
-	\include{review}
-	\include{dyn}
-	\include{estimation}
-	\include{experiments}
-	\include{end}
-	\include{list}
-	\include{app}
+	\include{full/intro}
+	\include{full/review}
+	\include{full/dyn}
+	\include{full/estimation}
+	\include{full/experiments}
+	\include{full/end}
+	\include{full/termlist}
+	\include{full/publist}
+	\include{full/appA}
 	\sloppy
 	\printbibliography
 \end{document}
