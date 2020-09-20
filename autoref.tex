@@ -41,8 +41,11 @@
 \titleformat{\chapter}[display]
 {\normalfont\bfseries}{}{0pt}{\Large}
 
+\setcounter{tocdepth}{0} %% -- only parts
+
 \begin{document}
 	\include{autoref/title}
+	\tableofcontents
 	\include{autoref/intro}
 	\include{autoref/main}
 	\include{autoref/list}
