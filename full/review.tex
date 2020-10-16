@@ -165,14 +165,14 @@ m \ddot{\bm{r}} = \bm{F}_g + \bm{F}_{aero} + \bm{F}_{thr}.
 Внешний момент, действующий на пропеллер, связывают с квадратом его оборотов с помощью аэродинамического коэффициента $b$ \cite{Ryll01}
 
 \begin{equation} \label{eq:rotor_ext_torque}
-\bm{\tau}_{Bi} = -b \tilde{\omega}^2_i \bm{z_i}.
+\bm{\tau}_{Bi}^{ext} = -b \tilde{\omega}^2_i \bm{z_i}.
 \end{equation}
 Также модель может включать в себя аэродинамические моменты \cite{Solovev01}.
 
 При синтезе контура управления квадрокоптера стандартной конструкции в качестве компонентов вектора управления выбирают обороты его двигателей или некоторые их функции \cite{Sharifi01, Luukkonen01, Bemporad01}.  С учетом выражений (\ref{eq:thrust_force}), (\ref{eq:rotor_ext_torque}) удобно сформировать вектор управляющих воздействий из квадратов скоростей вращения пропеллеров
 
 \begin{equation} \label{eq:common_control_vector}
-u_i = \tilde{w}_i^2.
+u_i = \tilde{\omega}_i^2.
 \end{equation}
 Конкретные выражения для компонент зависят от рассматриваемой схемы квадрокоптера и способа нумерации его двигателей.
  
@@ -227,8 +227,8 @@ u_i = \tilde{w}_i^2.
 	\bm{u} =
 	\begin{bmatrix}
 	k & k & k & k\\
-	0 & bL & 0 & -bL\\
-	-bL & 0 & bL & 0\\
+	0 & kL & 0 & -kL\\
+	-kL & 0 & k	L & 0\\
 	b & -b & b & -b
 	\end{bmatrix}
 	\begin{bmatrix}
